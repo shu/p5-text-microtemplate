@@ -100,7 +100,7 @@ sub _build {
             my $value = $line->[$j + 1];
 
             if ($type ne 'text' && defined $last_text) {
-                $lines[-1] = "\$_MT .=\"$last_text\";";
+                $lines[-1] .= "\$_MT .=\"$last_text\";";
                 undef $last_text;
             }
             
